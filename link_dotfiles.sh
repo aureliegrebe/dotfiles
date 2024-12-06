@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Use 'olympus' or 'delphi'."
+echo "Use 'olympus' or 'laptop'."
 if [ "$1" = "olympus" ];
 then
   ln -svf ~/dotfiles/olympus/.bashrc ~/.bashrc
@@ -12,9 +12,10 @@ then
   ln -svf ~/dotfiles/link_dotfiles.sh ~/.scripts/link_dotfiles.sh
 fi
 
-if [ "$1" = "delphi" ];
+if [ "$1" = "laptop" ];
 then
-  ln -svf ~/dotfiles/delphi/.bashrc ~/.bashrc
-  ln -svf ~/dotfiles/delphi/.vimrc ~/.vimrc
+  ln -svf ~/dotfiles/laptop/bashrc ~/.bashrc
+  ln -svf ~/dotfiles/laptop/.inputrx ~/.vimrc
+  ln -svf ~/dotfiles/laptop/tmux ~/.config/tmux
   ln -svf ~/dotfiles/link_dotfiles.sh ~/.scripts/link_dotfiles.sh
 fi
